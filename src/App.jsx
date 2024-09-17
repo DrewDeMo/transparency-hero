@@ -1,59 +1,57 @@
-import React, { useState, useEffect } from 'react'
-import { ChevronLeft, ChevronRight, Info, Play, Pause } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
+import React, { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight, Info, Play, Pause } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Hero1 from './components/Hero1';
+import Hero2 from './components/Hero2';
+import Hero3 from './components/Hero3';
+import Hero4 from './components/Hero4';
+import Hero5 from './components/Hero5';
 
 const heroes = [
-    {
-        name: 'Mountain Vista',
-        description: 'A breathtaking view of snow-capped mountains at sunrise.',
-        image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1920&q=80',
-    },
-    {
-        name: 'Coastal Serenity',
-        description: 'Tranquil beach scene with crystal clear waters and soft sand.',
-        image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80',
-    },
-    {
-        name: 'Urban Nightscape',
-        description: 'A vibrant cityscape illuminated by countless lights at night.',
-        image: 'https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1920&q=80',
-    },
-]
+    { component: Hero1, name: 'Mountain Vista', description: 'A breathtaking view of snow-capped mountains at sunrise.' },
+    { component: Hero2, name: 'Coastal Serenity', description: 'Tranquil beach scene with crystal clear waters and soft sand.' },
+    { component: Hero3, name: 'Urban Nightscape', description: 'A vibrant cityscape illuminated by countless lights at night.' },
+    { component: Hero4, name: 'Forest Canopy', description: 'Sunlight filtering through a lush, green forest canopy.' },
+    { component: Hero5, name: 'Valley Vista', description: 'A panoramic view of a lush valley with rolling hills and a winding river.' },
+];
 
 function App() {
-    const [currentHeroIndex, setCurrentHeroIndex] = useState(0)
-    const [showInfo, setShowInfo] = useState(false)
-    const [isAutoplay, setIsAutoplay] = useState(false)
+    const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
+    const [showInfo, setShowInfo] = useState(false);
+    const [isAutoplay, setIsAutoplay] = useState(false);
 
     const nextHero = () => {
-        setCurrentHeroIndex((prevIndex) => (prevIndex + 1) % heroes.length)
-    }
+        setCurrentHeroIndex((prevIndex) => (prevIndex + 1) % heroes.length);
+    };
 
     const prevHero = () => {
-        setCurrentHeroIndex((prevIndex) => (prevIndex - 1 + heroes.length) % heroes.length)
-    }
+        setCurrentHeroIndex((prevIndex) => (prevIndex - 1 + heroes.length) % heroes.length);
+    };
 
     useEffect(() => {
-        let interval
+        let interval;
         if (isAutoplay) {
-            interval = setInterval(nextHero, 5000) // Change hero every 5 seconds
+            interval = setInterval(nextHero, 5000); // Change hero every 5 seconds
         }
-        return () => clearInterval(interval)
-    }, [isAutoplay])
+        return () => clearInterval(interval);
+    }, [isAutoplay]);
+
+    const CurrentHero = heroes[currentHeroIndex].component;
 
     return (
         <div className="relative w-screen h-screen overflow-hidden">
-            {/* Hero Image */}
+            {/* Hero Component */}
             <AnimatePresence initial={false}>
                 <motion.div
                     key={currentHeroIndex}
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: `url(${heroes[currentHeroIndex].image})` }}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
-                />
+                    className="absolute inset-0"
+                >
+                    <CurrentHero />
+                </motion.div>
             </AnimatePresence>
 
             {/* Glassmorphic Hero Information Overlay */}
@@ -112,7 +110,7 @@ function App() {
                 </button>
             </div>
         </div>
-    )
+    );
 }
 
-export default App
+export default App;
