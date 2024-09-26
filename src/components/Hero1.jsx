@@ -10,8 +10,8 @@ const Hero1 = () => {
             />
             <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-white text-center">
-                    <h1 className="text-5xl font-bold mb-4">Mountain Vista</h1>
-                    <p className="text-xl">A breathtaking view of snow-capped mountains at sunrise.</p>
+                    <h1 className="text-5xl font-bold mb-4">Portal Concept</h1>
+                    <p className="text-xl">A concept like the current hero, with the text being sucked into a watery portal.</p>
                 </div>
             </div>
         </div>
