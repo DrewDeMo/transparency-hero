@@ -8,7 +8,7 @@ import Hero4 from './components/Hero4';
 import Hero5 from './components/Hero5';
 
 const heroes = [
-    { component: Hero1, name: 'Mountain Vista', description: 'A breathtaking view of snow-capped mountains at sunrise.' },
+    { component: Hero1, name: 'Portal Concept', description: 'A concept like the current hero, with the text being sucked into a watery portal.' },
     { component: Hero2, name: 'Coastal Serenity', description: 'Tranquil beach scene with crystal clear waters and soft sand.' },
     { component: Hero3, name: 'Urban Nightscape', description: 'A vibrant cityscape illuminated by countless lights at night.' },
     { component: Hero4, name: 'Forest Canopy', description: 'Sunlight filtering through a lush, green forest canopy.' },
