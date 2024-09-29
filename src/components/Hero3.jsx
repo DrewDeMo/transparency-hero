@@ -11,10 +11,7 @@ const Hero3 = () => {
                 scene="https://prod.spline.design/ms2VYd1AKdHSaP0n/scene.splinecode"
             />
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="text-white text-center mt-16"> {/* Added mt-16 to push content down */}
-                    <h1 className="text-5xl font-bold mb-4">Urban Nightscape</h1>
-                    <p className="text-xl">A vibrant cityscape illuminated by countless lights at night.</p>
-                </div>
+                {/* This is where text will go when needed */}
             </div>
         </div>
     );
