@@ -11,7 +11,7 @@ const Hero1 = () => {
                     scene="https://prod.spline.design/3zU-jQGH2HJGhvUY/scene.splinecode"
                 />
             </div>
-            <div className="absolute inset-0 z-10">
+            <div className="absolute inset-0 z-10 flex items-center justify-center">
                 <AnimatedWords />
             </div>
         </div>
