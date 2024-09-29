@@ -41,7 +41,7 @@ function App() {
     return (
         <div className="relative w-screen h-screen overflow-hidden">
             {/* Hero Component */}
-            <AnimatePresence initial={false}>
+            <AnimatePresence>
                 <motion.div
                     key={currentHeroIndex}
                     initial={{ opacity: 0 }}
@@ -61,7 +61,7 @@ function App() {
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 50 }}
-                        className="absolute bottom-24 left-8 right-8 p-6 bg-black bg-opacity-30 backdrop-filter backdrop-blur-lg rounded-lg text-white"
+                        className="absolute bottom-24 left-8 right-8 p-6 bg-black bg-opacity-30 backdrop-filter backdrop-blur-lg rounded-lg text-white z-50"
                     >
                         <h2 className="text-3xl font-bold mb-2">{heroes[currentHeroIndex].name}</h2>
                         <p className="text-lg">{heroes[currentHeroIndex].description}</p>
@@ -70,7 +70,7 @@ function App() {
             </AnimatePresence>
 
             {/* Glassmorphic Control Panel */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center space-x-4 p-2 bg-black bg-opacity-30 backdrop-filter backdrop-blur-lg rounded-full">
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center space-x-4 p-2 bg-black bg-opacity-30 backdrop-filter backdrop-blur-lg rounded-full z-50">
                 <button
                     onClick={prevHero}
                     className="p-2 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 transition-colors"
