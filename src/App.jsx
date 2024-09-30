@@ -8,6 +8,7 @@ import Hero4 from './components/Hero4';
 import Hero5 from './components/Hero5';
 import Hero6 from './components/Hero6';
 import Hero7 from './components/Hero7';
+import Hero8 from './components/Hero8';
 
 const heroes = [
     { component: Hero2, name: 'Attack of the Blobs', description: '3Dimensional blobs that you can click and drag around to really showcase transparency in an interactive way.' },
@@ -16,6 +17,7 @@ const heroes = [
     { component: Hero5, name: 'Simple Glass', description: 'Very simple and clean glass effect on the SVG revealing text underneath, pans with finger/cursor.' },
     { component: Hero6, name: 'Flashlight', description: 'Interactive scene where your mouse/finger controlls a flashlight. The flashlight reveals the transparent word "TRANSPARENT".' },
     { component: Hero7, name: 'Pinwheel', description: 'A 3d animation with multiple 3d shapes, the first layer being glass and the rest being company colors. On hover these can cause things to happen.' },
+    { component: Hero8, name: 'Particle Effect', description: 'A particle mouseover effects, spawns circular particles that fade out to 0% transparency, when these particles "die" they fade out in transparency.' },
     { component: Hero1, name: 'Portal Animated Agency Concept', description: 'Showcasing the water element of transparency this page will be a portal, when you scroll down will take you "through" it to our content.' },
 ];
 
