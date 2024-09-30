@@ -7,14 +7,16 @@ import Hero3 from './components/Hero3';
 import Hero4 from './components/Hero4';
 import Hero5 from './components/Hero5';
 import Hero6 from './components/Hero6';
+import Hero7 from './components/Hero7';
 
 const heroes = [
-    { component: Hero2, name: 'Coastal Serenity', description: 'Tranquil beach scene with crystal clear waters and soft sand.' },
-    { component: Hero3, name: 'Urban Nightscape', description: 'A vibrant cityscape illuminated by countless lights at night.' },
-    { component: Hero4, name: 'Forest Canopy', description: 'Sunlight filtering through a lush, green forest canopy.' },
-    { component: Hero5, name: 'Valley Vista', description: 'A panoramic view of a lush valley with rolling hills and a winding river.' },
-    { component: Hero6, name: 'Valley Vista', description: 'A panoramic view of a lush valley with rolling hills and a winding river.' },
-    { component: Hero1, name: 'Portal Animated Agency Concept', description: 'An engaging animation showcasing various aspects of our agency, culminating in "Full Service TRANSPARENT Agency".' },
+    { component: Hero2, name: 'Attack of the Blobs', description: '3Dimensional blobs that you can click and drag around to really showcase transparency in an interactive way.' },
+    { component: Hero3, name: 'Sherlock', description: 'Using glass circles and the 3rd dimension, we simulate a magnifying glass that can magnify the content underneath.' },
+    { component: Hero4, name: 'Goldeneye', description: 'Deemed the "Goldeneye" effect, this slide has a glass overlay allowing the cursor to clear the fogged glass and reveal the content underneath.' },
+    { component: Hero5, name: 'Simple Glass', description: 'Very simple and clean glass effect on the SVG revealing text underneath, pans with finger/cursor.' },
+    { component: Hero6, name: 'Flashlight', description: 'Interactive scene where your mouse/finger controlls a flashlight. The flashlight reveals the transparent word "TRANSPARENT".' },
+    { component: Hero7, name: 'Pinwheel', description: 'A 3d animation with multiple 3d shapes, the first layer being glass and the rest being company colors. On hover these can cause things to happen.' },
+    { component: Hero1, name: 'Portal Animated Agency Concept', description: 'Showcasing the water element of transparency this page will be a portal, when you scroll down will take you "through" it to our content.' },
 ];
 
 function App() {
