@@ -48,7 +48,7 @@ function App() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="absolute inset-0"
+                    className="absolute inset-0 z-0"
                 >
                     <CurrentHero />
                 </motion.div>
@@ -61,52 +61,52 @@ function App() {
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 50 }}
-                        className="absolute bottom-24 left-8 right-8 p-6 bg-black bg-opacity-30 backdrop-filter backdrop-blur-lg rounded-lg text-white z-50"
+                        className="absolute bottom-24 left-4 right-4 md:left-8 md:right-8 p-4 md:p-6 bg-black bg-opacity-30 backdrop-filter backdrop-blur-lg rounded-lg text-white z-30"
                     >
-                        <h2 className="text-3xl font-bold mb-2">{heroes[currentHeroIndex].name}</h2>
-                        <p className="text-lg">{heroes[currentHeroIndex].description}</p>
+                        <h2 className="text-2xl md:text-3xl font-bold mb-2">{heroes[currentHeroIndex].name}</h2>
+                        <p className="text-sm md:text-lg">{heroes[currentHeroIndex].description}</p>
                     </motion.div>
                 )}
             </AnimatePresence>
 
             {/* Glassmorphic Control Panel */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center space-x-4 p-2 bg-black bg-opacity-30 backdrop-filter backdrop-blur-lg rounded-full z-50">
+            <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex items-center space-x-2 md:space-x-4 p-2 bg-black bg-opacity-30 backdrop-filter backdrop-blur-lg rounded-full z-30">
                 <button
                     onClick={prevHero}
-                    className="p-2 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 transition-colors"
+                    className="p-1 md:p-2 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 transition-colors"
                     aria-label="Previous hero"
                 >
-                    <ChevronLeft className="w-6 h-6 text-white" />
+                    <ChevronLeft className="w-4 h-4 md:w-6 md:h-6 text-white" />
                 </button>
-                <div className="px-4 py-2 rounded-full bg-white bg-opacity-20">
-                    <span className="font-semibold text-white">
+                <div className="px-2 md:px-4 py-1 md:py-2 rounded-full bg-white bg-opacity-20">
+                    <span className="text-sm md:text-base font-semibold text-white">
                         {currentHeroIndex + 1} / {heroes.length}
                     </span>
                 </div>
                 <button
                     onClick={nextHero}
-                    className="p-2 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 transition-colors"
+                    className="p-1 md:p-2 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 transition-colors"
                     aria-label="Next hero"
                 >
-                    <ChevronRight className="w-6 h-6 text-white" />
+                    <ChevronRight className="w-4 h-4 md:w-6 md:h-6 text-white" />
                 </button>
                 <button
                     onClick={() => setIsAutoplay(!isAutoplay)}
-                    className="p-2 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 transition-colors"
+                    className="p-1 md:p-2 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 transition-colors"
                     aria-label={isAutoplay ? "Stop autoplay" : "Start autoplay"}
                 >
                     {isAutoplay ? (
-                        <Pause className="w-6 h-6 text-white" />
+                        <Pause className="w-4 h-4 md:w-6 md:h-6 text-white" />
                     ) : (
-                        <Play className="w-6 h-6 text-white" />
+                        <Play className="w-4 h-4 md:w-6 md:h-6 text-white" />
                     )}
                 </button>
                 <button
                     onClick={() => setShowInfo(!showInfo)}
-                    className="p-2 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 transition-colors"
+                    className="p-1 md:p-2 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 transition-colors"
                     aria-label="Toggle info"
                 >
-                    <Info className="w-6 h-6 text-white" />
+                    <Info className="w-4 h-4 md:w-6 md:h-6 text-white" />
                 </button>
             </div>
         </div>
