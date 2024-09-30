@@ -10,9 +10,9 @@ import Hero5 from './components/Hero5';
 const heroes = [
     { component: Hero2, name: 'Coastal Serenity', description: 'Tranquil beach scene with crystal clear waters and soft sand.' },
     { component: Hero3, name: 'Urban Nightscape', description: 'A vibrant cityscape illuminated by countless lights at night.' },
-    { component: Hero1, name: 'Portal Animated Agency Concept', description: 'An engaging animation showcasing various aspects of our agency, culminating in "Full Service TRANSPARENT Agency".' },
     { component: Hero4, name: 'Forest Canopy', description: 'Sunlight filtering through a lush, green forest canopy.' },
     { component: Hero5, name: 'Valley Vista', description: 'A panoramic view of a lush valley with rolling hills and a winding river.' },
+    { component: Hero1, name: 'Portal Animated Agency Concept', description: 'An engaging animation showcasing various aspects of our agency, culminating in "Full Service TRANSPARENT Agency".' },
 ];
 
 function App() {

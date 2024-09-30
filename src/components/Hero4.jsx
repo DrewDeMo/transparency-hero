@@ -1,11 +1,28 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import Spline from '@splinetool/react-spline';
+import Header2 from './Header2';
 
 const Hero4 = () => {
+    const onLoad = useCallback((spline) => {
+        const wheelEventHandler = (e) => {
+            // Allow default scrolling behavior
+        };
+        spline.canvas.addEventListener('wheel', wheelEventHandler, { passive: true });
+
+        return () => {
+            spline.canvas.removeEventListener('wheel', wheelEventHandler);
+        };
+    }, []);
+
     return (
-        <div className="h-screen bg-cover bg-center flex items-center justify-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1920&q=80')" }}>
-            <div className="text-white text-center">
-                <h1 className="text-5xl font-bold mb-4">Forest Canopy</h1>
-                <p className="text-xl">Sunlight filtering through a lush, green forest canopy.</p>
+        <div className="relative">
+            <Header2 />
+            <div className="h-screen relative">
+                <Spline
+                    className="w-full h-full"
+                    scene="https://prod.spline.design/PKmRc5swSIyfNUQl/scene.splinecode"
+                    onLoad={onLoad}
+                />
             </div>
         </div>
     );
