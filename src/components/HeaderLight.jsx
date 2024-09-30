@@ -26,7 +26,7 @@ export default function HeaderLight() {
         <>
             <motion.header
                 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-black/30 backdrop-blur-md' : ''
-                    }`}
+                    } font-montserrat`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
@@ -74,7 +74,7 @@ export default function HeaderLight() {
             <AnimatePresence>
                 {isMenuOpen && (
                     <motion.div
-                        className="fixed inset-0 bg-black/70 backdrop-blur-lg z-40 md:hidden"
+                        className="fixed inset-0 bg-black/70 backdrop-blur-lg z-40 md:hidden font-montserrat"
                         variants={menuVariants}
                         initial="closed"
                         animate="open"

@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        'montserrat': ['Montserrat', 'sans-serif'],
         'unbounded': ['Unbounded', 'sans-serif'],
       },
     },
