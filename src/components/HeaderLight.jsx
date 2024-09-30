@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import TCLLogo from '../assets/TCL_Logo_Full.svg';
+import TCLWhiteLogo from '../assets/TCL_White_Logo.svg';
 
 export default function HeaderLight() {
     const [scrolled, setScrolled] = useState(false);
@@ -38,7 +38,7 @@ export default function HeaderLight() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
                     >
-                        <img src={TCLLogo} alt="TCL Logo" className="w-[150px] h-auto sm:w-[223px] invert" />
+                        <img src={TCLWhiteLogo} alt="TCL Logo" className="w-[150px] h-auto sm:w-[223px]" />
                     </motion.div>
                     <nav className="hidden md:block">
                         <ul className="flex space-x-8 text-lg font-medium">
