@@ -1,10 +1,12 @@
 import React from 'react';
 import Spline from '@splinetool/react-spline';
 import AnimatedWords from './AnimatedHero/AnimatedWords';
+import HeaderLight from './HeaderLight';
 
 const Hero1 = () => {
     return (
         <div className="relative h-screen w-full overflow-hidden">
+            <HeaderLight />
             <div className="absolute inset-0 z-0">
                 <Spline
                     className="w-full h-full"
